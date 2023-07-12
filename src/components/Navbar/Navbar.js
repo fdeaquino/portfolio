@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const meta = {
@@ -9,188 +10,97 @@ const meta = {
     script: [],
 };
 
-export default function Index() {
+export default function Navbar() {
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [activeMenuItem, setActiveMenuItem] = useState('home');
+    const location = useLocation();
+
+    useEffect(() => {
+        const currentPath = location.pathname.split('/')[1] || 'home';
+        setActiveMenuItem(currentPath);
+    }, [location]);
+
+    const handleToggle = () => {
+        setIsExpanded(!isExpanded);
+        document.body.classList.toggle('cs-open');
+    };
+
+    const closeMenu = () => {
+        setIsExpanded(false);
+        document.body.classList.remove('cs-open');
+    };
+
     return (
         <React.Fragment>
             <HelmetProvider>
                 <Helmet {...meta}></Helmet>
             </HelmetProvider>
-            <section>
-                <nav className='navbar navbar-dark navbar-expand-lg bg-secondary py-5 py-lg-3 px-5'>
-                    <div className='container-fluid'>
-                        <a className='navbar-brand' href='#'>
-                            <img
-                                className='img-fluid'
-                                src='gradia-assets/logos/gradia-name-white.svg'
-                                alt=''
-                            />
-                        </a>
-                        <div className='collapse navbar-collapse me-5 justify-content-end'>
-                            <ul className='navbar-nav'>
-                                <li className='nav-item p-5'>
-                                    <a className='nav-link d-inline-block p-0' href='#'>
-                                        <h3 className='fs-17 fw-medium text-white mb-0'>
-                                            About
-                                        </h3>
-                                    </a>
-                                </li>
-                                <li className='nav-item p-5'>
-                                    <a className='nav-link d-inline-block p-0' href='#'>
-                                        <h3 className='fs-17 fw-medium text-white mb-0'>
-                                            Projects
-                                        </h3>
-                                    </a>
-                                </li>
-                                <li className='nav-item p-5'>
-                                    <a className='nav-link d-inline-block p-0' href='#'>
-                                        <h3 className='fs-17 fw-medium text-white mb-0'>
-                                            Skills
-                                        </h3>
-                                    </a>
-                                </li>
-                                <li className='nav-item p-5'>
-                                    <a className='nav-link d-inline-block p-0' href='#'>
-                                        <h3 className='fs-17 fw-medium text-white mb-0'>Resume</h3>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className='d-none d-lg-block'>
-                            <div
-                                className='rounded-3'
-                                style={{
-                                    padding: 2,
-                                    background:
-                                        'linear-gradient(90deg, rgba(108,213,246,1 ) 0%, rgba(248,157,92,1) 50%, rgba(91,106,240,1) 100%)',
-                                }}
-                            >
-                                <button
-                                    className='btn btn-secondary px-4 py-3 rounded-1'
-                                    type='button'
-                                >
-                                    <h4 className='fs-17 fw-medium text-white mb-0'>
-                                        Contact for Pricing
-                                    </h4>
-                                </button>
+            <header id="cs-navigation" className={isExpanded ? 'bg-secondary cs-active' : 'bg-secondary'}>
+                <div className="cs-container">
+                    <Link to="/" className="cs-logo" aria-label="back to home" onClick={closeMenu}>
+                        <img
+                            className='img-fluid'
+                            src='gradia-assets/logos/gradia-name-white.svg'
+                            alt=''
+                        />
+                    </Link>
+                    <nav className="cs-nav" role="navigation">
+                        <button
+                            className={`cs-toggle ${isExpanded ? 'cs-active' : ''}`}
+                            aria-label="mobile menu toggle"
+                            onClick={handleToggle}
+                            aria-expanded={isExpanded}
+                        >
+                            <div className="cs-box" aria-hidden="true">
+                                <span className="cs-line cs-line1" aria-hidden="true"></span>
+                                <span className="cs-line cs-line2" aria-hidden="true"></span>
+                                <span className="cs-line cs-line3" aria-hidden="true"></span>
                             </div>
-                        </div>
-                        <div className='d-lg-none'>
-                            <button className='btn navbar-burger p-0'>
-                                <svg
-                                    className='text-dark-light'
-                                    width={51}
-                                    height={51}
-                                    viewBox='0 0 56 56'
-                                    fill='none'
-                                    xmlns='http://www.w3.org/2000/svg'
-                                >
-                                    <rect width={56} height={56} rx={28} fill='currentColor' />
-                                    <path
-                                        d='M37 32H19M37 24H19'
-                                        stroke='white'
-                                        strokeWidth='1.5'
-                                        strokeLinecap='round'
-                                        strokeLinejoin='round'
-                                    />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </nav>
-                <div
-                    className='d-none navbar-menu position-fixed top-0 start-0 bottom-0 w-75 mw-xs'
-                    style={{ zIndex: 9999 }}
-                >
-                    <div
-                        className='navbar-close navbar-backdrop position-fixed top-0 start-0 end-0 bottom-0 bg-dark'
-                        style={{ opacity: '75%' }}
-                    />
-                    <nav className='position-relative h-100 w-100 d-flex flex-column justify-content-between py-8 px-8 bg-secondary overflow-auto'>
-                        <div className='d-flex align-items-center'>
-                            <a className='me-auto h4 mb-0 text-decoration-none' href='#'>
-                                <img
-                                    className='img-fluid'
-                                    src='gradia-assets/logos/gradia-name-white.svg'
-                                    alt=''
-                                />
-                            </a>
-                            <a className='navbar-close text-white' href='#'>
-                                <svg
-                                    width={24}
-                                    height={24}
-                                    viewBox='0 0 24 24'
-                                    fill='none'
-                                    xmlns='http://www.w3.org/2000/svg'
-                                >
-                                    <path
-                                        d='M6 18L18 6M6 6L18 18'
-                                        stroke='currentColor'
-                                        strokeWidth={2}
-                                        strokeLinecap='round'
-                                        strokeLinejoin='round'
-                                    />
-                                </svg>
-                            </a>
-                        </div>
-                        <div className='py-16'>
-                            <ul className='nav flex-column'>
-                                <li className='nav-item mb-12'>
-                                    <a className='nav-link d-inline-block p-0' href='#'>
-                                        <h3 className='fs-17 fw-medium text-white mb-0'>
-                                            Features
-                                        </h3>
-                                    </a>
-                                </li>
-                                <li className='nav-item mb-12'>
-                                    <a className='nav-link d-inline-block p-0' href='#'>
-                                        <h3 className='fs-17 fw-medium text-white mb-0'>
-                                            Solutions
-                                        </h3>
-                                    </a>
-                                </li>
-                                <li className='nav-item mb-12'>
-                                    <a className='nav-link d-inline-block p-0' href='#'>
-                                        <h3 className='fs-17 fw-medium text-white mb-0'>
-                                            Resources
-                                        </h3>
-                                    </a>
-                                </li>
-                                <li className='nav-item'>
-                                    <a className='nav-link d-inline-block p-0' href='#'>
-                                        <h3 className='fs-17 fw-medium text-white mb-0'>Pricing</h3>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <button
-                                className='btn btn-secondary px-4 py-3 w-100 mb-5 rounded-1'
-                                type='button'
+                        </button>
+                        <div className="cs-ul-wrapper">
+                            <ul
+                                id="cs-expanded"
+                                className={`cs-ul ${isExpanded ? 'cs-active' : ''}`}
                             >
-                                <h4 className='fs-17 fw-medium text-white mb-0'>Login</h4>
-                            </button>
-                            <div
-                                className='d-inline-block w-100 rounded-3'
-                                style={{
-                                    padding: 2,
-                                    background:
-                                        'linear-gradient(90deg, rgba(108,213,246,1 ) 0%, rgba(248,157,92,1) 50%, rgba(91,106,240,1) 100%)',
-                                }}
-                            >
-                                <button
-                                    className='btn btn-secondary px-4 py-3 w-100 rounded-1'
-                                    type='button'
-                                >
-                                    <h4 className='fs-17 fw-medium text-white mb-0'>
-                                        Start Free Trial
-                                    </h4>
-                                </button>
+                                <li className="nav-item cs-li">
+                                    <Link to="/about" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link ${activeMenuItem === 'about' ? 'cs-active' : ''}`} onClick={closeMenu}>
+                                        About
+                                    </Link>
+                                </li>
+                                <li className="nav-item cs-li">
+                                    <Link to="/projects" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link ${activeMenuItem === 'projects' ? 'cs-active' : ''}`} onClick={closeMenu}>
+                                        Projects
+                                    </Link>
+                                </li>
+                                <li className="nav-item cs-li">
+                                    <Link to="/skills" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link ${activeMenuItem === 'skills' ? 'cs-active' : ''}`} onClick={closeMenu}>
+                                        Skills
+                                    </Link>
+                                </li>
+                                <li className="nav-item cs-li">
+                                    <Link to="/resume" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link ${activeMenuItem === 'resume' ? 'cs-active' : ''}`} onClick={closeMenu}>
+                                        Resume
+                                    </Link>
+                                </li>
+                                {/* <li className="nav-item cs-li">
+                                    <Link  className={`cs-li-link cs-button-solid cs-nav-button ${activeMenuItem === 'contact' ? 'cs-active' : ''}`} onClick={closeMenu}>
+                                        Contact
+                                    </Link>
+                                </li> */}
+                                <div className="d-lg-block">
+                                <div className="rounded-3" style={{ padding: "2px", background: "linear-gradient(90deg, rgba(108,213,246,1 ) 0%, rgba(248,157,92,1) 50%, rgba(91,106,240,1) 100%)" }}>
+                                    <button className="btn btn-secondary px-4 py-3 rounded-1" type="button" onClick={closeMenu}>
+                                        <Link to="/contact" className="fs-17 fw-medium text-white mb-0">Contact</Link>
+                                    </button>
+                                </div>
                             </div>
+                            </ul>
+                            
+
                         </div>
                     </nav>
                 </div>
-            </section>
+            </header>
         </React.Fragment>
     );
 }
-
