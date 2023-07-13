@@ -20,3 +20,43 @@
         max-width: 40vw;
     }
 }
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-radial {
+    background:
+        -webkit-radial-gradient(110% 100%, farthest-corner, rgba(0, 70, 68, 0.1) 0%, rgba(18, 106, 89, 0.1) 40%, rgba(255, 255, 255, 0.9) 100%),
+        -webkit-radial-gradient(rgba(60, 144, 102, 0.1), rgba(113, 181, 108, 0.1), rgba(255, 255, 255, 0.9)),
+        -webkit-radial-gradient(-10% 95%, farthest-corner, rgba(175, 216, 109, 0.1) 45%, rgba(249, 248, 113, 0.1), rgba(255, 255, 255, 0.9) 100%),
+        -webkit-radial-gradient(left, circle, rgba(0, 70, 68, 0.1) 0%, rgba(255, 255, 255, 0.9) 100%);
+
+    background:
+        -o-radial-gradient(110% 100%, farthest-corner, rgba(0, 70, 68, 0.1) 0%, rgba(18, 106, 89, 0.1) 40%, rgba(255, 255, 255, 0.9) 100%),
+        -o-radial-gradient(rgba(60, 144, 102, 0.1), rgba(113, 181, 108, 0.1), rgba(255, 255, 255, 0.9)),
+        -o-radial-gradient(-10% 95%, farthest-corner, rgba(175, 216, 109, 0.1) 45%, rgba(249, 248, 113, 0.8), rgba(255, 255, 255, 0.9) 100%),
+        -o-radial-gradient(left, circle, rgba(0, 70, 68, 0.1) 0%, rgba(255, 255, 255, 0.9) 100%);
+
+    background:
+        radial-gradient(farthest-corner at -110% 100%, rgba(0, 70, 68, 0.7) 0%, rgba(18, 106, 89, 0.1) 40%, rgba(255, 255, 255, 0.9) 100%),
+        radial-gradient(rgba(60, 144, 102, 0.1), rgba(113, 181, 108, 0.1), rgba(255, 255, 255, 0.9)),
+        radial-gradient(farthest-corner at -20% 100%, rgba(175, 216, 109, 0.9) 15%, rgba(249, 248, 113, 0.1), rgba(255, 255, 255, 0.9) 100%),
+        radial-gradient(circle at left, rgba(0, 70, 68, 0.1) 0%, rgba(255, 255, 255, 0.9) 100%);
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    animation: gradient 3s linear infinite;
+}
