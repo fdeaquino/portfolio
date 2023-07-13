@@ -11,6 +11,8 @@ const meta = {
 };
 
 export default function Navbar() {
+    const logo = 'https://ik.imagekit.io/s3i7pk3bg/portfolio-logo.png?updatedAt=1689228057897';
+
     const [isExpanded, setIsExpanded] = useState(false);
     const [activeMenuItem, setActiveMenuItem] = useState('home');
     const location = useLocation();
@@ -40,9 +42,10 @@ export default function Navbar() {
                     <Link to="/" className="cs-logo" aria-label="back to home" onClick={closeMenu}>
                         <img
                             className='img-fluid'
-                            src='gradia-assets/logos/gradia-name-white.svg'
+                            src={logo}
                             alt=''
                         />
+                        <h2 class="fs-7 ps-2 text-white">Fidel Deaquino</h2>
                     </Link>
                     <nav className="cs-nav" role="navigation">
                         <button
@@ -63,22 +66,22 @@ export default function Navbar() {
                                 className={`cs-ul ${isExpanded ? 'cs-active' : ''}`}
                             >
                                 <li className="nav-item cs-li">
-                                    <Link to="/about" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link ${activeMenuItem === 'about' ? 'cs-active' : ''}`} onClick={closeMenu}>
+                                    <Link to="/about" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link fs-17 fw-medium ${activeMenuItem === 'about' ? 'cs-active' : ''}`} onClick={closeMenu}>
                                         About
                                     </Link>
                                 </li>
                                 <li className="nav-item cs-li">
-                                    <Link to="/projects" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link ${activeMenuItem === 'projects' ? 'cs-active' : ''}`} onClick={closeMenu}>
+                                    <Link to="/projects" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link fs-17 fw-medium ${activeMenuItem === 'projects' ? 'cs-active' : ''}`} onClick={closeMenu}>
                                         Projects
                                     </Link>
                                 </li>
                                 <li className="nav-item cs-li">
-                                    <Link to="/skills" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link ${activeMenuItem === 'skills' ? 'cs-active' : ''}`} onClick={closeMenu}>
+                                    <Link to="/skills" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link fs-17 fw-medium ${activeMenuItem === 'skills' ? 'cs-active' : ''}`} onClick={closeMenu}>
                                         Skills
                                     </Link>
                                 </li>
                                 <li className="nav-item cs-li">
-                                    <Link to="/resume" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link ${activeMenuItem === 'resume' ? 'cs-active' : ''}`} onClick={closeMenu}>
+                                    <Link to="/resume" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link fs-17 fw-medium ${activeMenuItem === 'resume' ? 'cs-active' : ''}`} onClick={closeMenu}>
                                         Resume
                                     </Link>
                                 </li>
@@ -88,14 +91,15 @@ export default function Navbar() {
                                     </Link>
                                 </li> */}
                                 <div className="d-lg-block">
-                                <div className="rounded-3" style={{ padding: "2px", background: "linear-gradient(90deg, rgba(108,213,246,1 ) 0%, rgba(248,157,92,1) 50%, rgba(91,106,240,1) 100%)" }}>
-                                    <button className="btn btn-secondary px-4 py-3 rounded-1" type="button" onClick={closeMenu}>
-                                        <Link to="/contact" className="fs-17 fw-medium text-white mb-0">Contact</Link>
-                                    </button>
+                                    <div className="rounded-3" style={{ padding: "3px", background: "linear-gradient(185deg, rgba(0,70,68,1) 0%, rgba(18,106,89,1) 20%, rgba(60,144,102,1) 40%, rgba(113,181,108,1) 60%, rgba(175,216,109,1) 80%, rgba(249,248,113,1) 100%)" }}>
+
+                                        <button className="btn btn-secondary px-4 py-3 rounded-1" type="button" onClick={closeMenu}>
+                                            <Link to="/contact" className="fs-17 fw-medium text-white mb-0">Contact</Link>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
                             </ul>
-                            
+
 
                         </div>
                     </nav>
