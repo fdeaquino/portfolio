@@ -4,6 +4,9 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 
+import Footer from './components/Footer/Footer';
+
+
 
 function App() {
   return (
@@ -22,7 +25,7 @@ function App() {
             <Route path="/contact" element={<Contact />} /> */}
         </Routes>
       </main>
-      {/* <Footer /> */}
+      <Footer />
 
 
     </div>
