@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
+import Projects from './components/Projects/Projects';
 
 import Footer from './components/Footer/Footer';
 
@@ -16,13 +17,13 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Hero />} />
-          {/* <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/cases/*" element={<Cases casesData={casesData} />}>
-              <Route path=":id" element={<SingleCaseView casesData={casesData} />} />
-            </Route>
-            <Route path="/notfound" element={<NotAvailable casesData={casesData} />} />
-            <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/projects" element={<Projects />} />
+          {/* <Route path="/services" element={<Services />} /> */}
+          {/* <Route path="/cases/*" element={<Cases casesData={casesData} />}>
+            <Route path=":id" element={<SingleCaseView casesData={casesData} />} />
+          </Route> */}
+          {/* <Route path="/notfound" element={<NotAvailable casesData={casesData} />} /> */}
+          {/* <Route path="/contact" element={<Contact />} /> */}
         </Routes>
       </main>
       <Footer />

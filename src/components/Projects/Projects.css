@@ -1,0 +1,16 @@
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width: 64rem) {
+    #projects-page {
+        margin-top: 3rem;
+    }
+}
+
+@media only screen and (min-width: 48rem) {
+    #projects-page {
+        margin-top: 1.5rem;
+    }
+}

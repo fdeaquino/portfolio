@@ -66,7 +66,7 @@ export default function Navbar() {
                                 className={`cs-ul ${isExpanded ? 'cs-active' : ''}`}
                             >
                                 <li className="nav-item cs-li">
-                                    <Link to="/about" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link fs-17 fw-medium ${activeMenuItem === 'about' ? 'cs-active' : ''}`} onClick={closeMenu}>
+                                    <Link to="/" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link fs-17 fw-medium ${activeMenuItem === 'home' ? 'cs-active' : ''}`} onClick={closeMenu}>
                                         About
                                     </Link>
                                 </li>
