@@ -1,0 +1,37 @@
+@media only screen and (min-width: 64rem) {
+    #skillsresume-page {
+        margin-top: 3rem;
+    }
+}
+
+@media only screen and (min-width: 48rem) {
+    #skillsresume-page {
+        margin-top: 1.5rem;
+    }
+}
+
+#skillsresume-page.gradient-radial {
+    background:
+        -webkit-radial-gradient(90% 110%, farthest-corner, rgba(0, 70, 68, 0.1) 0%, rgba(18, 106, 89, 0.1) 40%, rgba(255, 255, 255, 0.9) 100%),
+        -webkit-radial-gradient(rgba(60, 144, 102, 0.1), rgba(113, 181, 108, 0.1), rgba(255, 255, 255, 0.9)),
+        -webkit-radial-gradient(-30% 80%, farthest-corner, rgba(175, 216, 109, 0.1) 45%, rgba(249, 248, 113, 0.1), rgba(255, 255, 255, 0.9) 100%),
+        -webkit-radial-gradient(right, circle, rgba(0, 70, 68, 0.1) 0%, rgba(255, 255, 255, 0.9) 100%);
+
+    background:
+        -o-radial-gradient(90% 110%, farthest-corner, rgba(0, 70, 68, 0.1) 0%, rgba(18, 106, 89, 0.1) 40%, rgba(255, 255, 255, 0.9) 100%),
+        -o-radial-gradient(rgba(60, 144, 102, 0.1), rgba(113, 181, 108, 0.1), rgba(255, 255, 255, 0.9)),
+        -o-radial-gradient(-30% 80%, farthest-corner, rgba(175, 216, 109, 0.1) 45%, rgba(249, 248, 113, 0.1), rgba(255, 255, 255, 0.9) 100%),
+        -o-radial-gradient(right, circle, rgba(0, 70, 68, 0.1) 0%, rgba(255, 255, 255, 0.9) 100%);
+
+    background:
+        radial-gradient(farthest-corner at -90% 110%, rgba(0, 70, 68, 0.7) 0%, rgba(18, 106, 89, 0.1) 40%, rgba(255, 255, 255, 0.9) 100%),
+        radial-gradient(rgba(60, 144, 102, 0.1), rgba(113, 181, 108, 0.1), rgba(255, 255, 255, 0.9)),
+        radial-gradient(farthest-corner at -40% 80%, rgba(175, 216, 109, 0.9) 15%, rgba(249, 248, 113, 0.1), rgba(255, 255, 255, 0.9) 100%),
+        radial-gradient(circle at right, rgba(0, 70, 68, 0.1) 0%, rgba(255, 255, 255, 0.9) 100%);
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    animation: gradient 3s linear infinite;
+}

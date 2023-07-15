@@ -282,7 +282,7 @@ function Projects() {
                         <div className="container">
                             <div className="row align-items-lg-center g-12 g-lg-16">
                                 <div className="col-12 col-md-6">
-                                    <div style={{ borderRadius: '15px', background: 'linear-gradient(0deg, #004644 0%, #126A59 20%, #3C9066 40%, #71B56C 60%, #AFD86D 80%, #F9F871 200%' }}>
+                                    <div style={{ borderRadius: '15px', background: 'linear-gradient(0deg, hsl(174, 55%, 30%) 0%, hsl(162, 43%, 35%) 20%, hsl(145, 36%, 47%) 40%, hsl(122, 38%, 58%) 60%, hsl(74, 47%, 73%) 80%, hsl(54, 85%, 78%) 100%)' }}>
                                         <img className="position-relative w-100" style={{ top: '12px' }} src="gradia-assets/images/features/team.png" alt="" />
                                     </div>
                                 </div>

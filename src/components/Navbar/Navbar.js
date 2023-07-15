@@ -77,12 +77,12 @@ export default function Navbar() {
                                 </li>
                                 <li className="nav-item cs-li">
                                     <Link to="/skills" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link fs-17 fw-medium ${activeMenuItem === 'skills' ? 'cs-active' : ''}`} onClick={closeMenu}>
-                                        Skills
+                                        Skills & Resumé
                                     </Link>
                                 </li>
                                 <li className="nav-item cs-li">
-                                    <Link to="/resume" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link fs-17 fw-medium ${activeMenuItem === 'resume' ? 'cs-active' : ''}`} onClick={closeMenu}>
-                                        Resume
+                                    <Link to="/blog" style={{ color: isExpanded ? 'black' : 'white' }} className={`cs-li-link fs-17 fw-medium ${activeMenuItem === 'blog' ? 'cs-active' : ''}`} onClick={closeMenu}>
+                                        Blog
                                     </Link>
                                 </li>
                                 {/* <li className="nav-item cs-li">
