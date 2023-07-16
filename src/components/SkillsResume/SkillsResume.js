@@ -67,7 +67,17 @@ function SkillsResume() {
                                     <div className="mw-md-xl">
                                         <h2 className="fs-11 mb-6">A Track Record of Adaptability and Growth</h2>
                                         <p className="text-muted mw-md-md mb-9">From teaching to administration, and now web development, my career demonstrates a strong capacity for learning and tackling new challenges.</p>
-                                        <button className="btn btn-light text-light fs-18 fw-medium px-6 py-4 rounded-pill" type="button" style={{ background: "linear-gradient(0deg, rgba(0, 70, 68, 0.9) 0%, rgb(18, 106, 89) 20%, rgb(60, 144, 102) 40%, rgb(113, 181, 108) 60%, rgb(175, 216, 109) 80%, rgba(249, 248, 113, 0.5) 100%)" }}>View Resume PDF</button>
+                                        {/* <button className="btn btn-light text-light fs-18 fw-medium px-6 py-4 rounded-pill" type="button" style={{ background: "linear-gradient(0deg, rgba(0, 70, 68, 0.9) 0%, rgb(18, 106, 89) 20%, rgb(60, 144, 102) 40%, rgb(113, 181, 108) 60%, rgb(175, 216, 109) 80%, rgba(249, 248, 113, 0.5) 100%)" }}>View Resume PDF</button> */}
+                                        <div className="text-center mt-14 d-flex">
+                                            <div className="rounded-3" style={{
+                                                padding: "3px",
+                                                background: "linear-gradient(180deg, rgba(0,70,68,1) 0%, rgba(18,106,89,1) 20%, rgba(60,144,102,1) 40%, rgba(113,181,108,1) 60%, rgba(175,216,109,1) 80%)"
+                                            }}>
+                                                <button className="btn btn-secondary px-4 py-3 rounded-1" type="button">
+                                                    <a href="https://github.com/fdeaquino" className="fs-17 fw-medium text-white mb-0">View Resumé</a>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-12 col-md-6">
