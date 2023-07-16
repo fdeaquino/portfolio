@@ -25,7 +25,7 @@ function SkillsResume() {
                 <div>
                     <div className="inline-block me-3" style={{ width: "14px", height: "14px", borderRadius: "40px", background: gradient }}></div>
                 </div>
-                <h3 className="fs-17 fw-semibold mb-0 text-secondary">{title}</h3>
+                <h3 className="fs-16 fw-semibold mb-0 text-secondary">{title}</h3>
             </div>
         </div>
     );
@@ -39,28 +39,35 @@ function SkillsResume() {
                         <p className="text-muted mw-md-md mx-auto mb-0">With a unique blend of creativity and technical skills, I deliver websites that not only look good but perform optimally.</p>
                     </div>
                     <div className="container">
-                        <div className="row justify-content-center mb-4 g-4">
-                            {webDevelopmentSkills.map(skill => <FeatureCard gradient={getRandomGradient()} title={skill} />)}
+                        <div>
+                            <div className="row justify-content-center mb-4 g-4">
+                                {webDevelopmentSkills.map(skill => <FeatureCard gradient={getRandomGradient()} title={skill} />)}
+                                {serverSideDevelopmentSkills.map(skill => <FeatureCard gradient={getRandomGradient()} title={skill} />)}
+                                {projectManagementSkills.map(skill => <FeatureCard gradient={getRandomGradient()} title={skill} />)}
+                            </div>
                         </div>
-                        <div className="row justify-content-center mb-4 g-4">
+                        {/* <div className="row justify-content-center mb-4 g-4">
                             {serverSideDevelopmentSkills.map(skill => <FeatureCard gradient={getRandomGradient()} title={skill} />)}
                         </div>
                         <div className="row justify-content-center g-4">
                             {projectManagementSkills.map(skill => <FeatureCard gradient={getRandomGradient()} title={skill} />)}
                         </div>
+                        <div className="row justify-content-center mb-4 g-4">
+                            {webDevelopmentSkills.map(skill => <FeatureCard gradient={getRandomGradient()} title={skill} />)}
+                        </div> */}
                     </div>
                 </div>
             </section>
-            <section className="py-40 bg-white overflow-hidden">
+            <section className="py-24 bg-white overflow-hidden">
                 <div className="container">
                     <div>
-                        <div className="container">
+                        <div className="container px-8">
                             <div className="row align-items-center g-16">
                                 <div className="col-12 col-md-6">
                                     <div className="mw-md-xl">
-                                        <h2 className="fs-10 mb-6">A Track Record of Adaptability and Growth</h2>
-                                        <p className="text-muted mw-md-md mb-9">From teaching to administration, and now development, my career demonstrates a strong capacity for learning and tackling new challenges.</p>
-                                        <button className="btn btn-primary fs-18 fw-medium px-6 py-4 rounded-pill" type="button">View Resume PDF</button>
+                                        <h2 className="fs-11 mb-6">A Track Record of Adaptability and Growth</h2>
+                                        <p className="text-muted mw-md-md mb-9">From teaching to administration, and now web development, my career demonstrates a strong capacity for learning and tackling new challenges.</p>
+                                        <button className="btn btn-light text-light fs-18 fw-medium px-6 py-4 rounded-pill" type="button" style={{ background: "linear-gradient(0deg, rgba(0, 70, 68, 0.9) 0%, rgb(18, 106, 89) 20%, rgb(60, 144, 102) 40%, rgb(113, 181, 108) 60%, rgb(175, 216, 109) 80%, rgba(249, 248, 113, 0.5) 100%)" }}>View Resume PDF</button>
                                     </div>
                                 </div>
                                 <div className="col-12 col-md-6">

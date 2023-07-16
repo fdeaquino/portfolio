@@ -208,7 +208,7 @@ function Projects() {
 
     return (
         <React.Fragment>
-            <section id='projects-page' className="position-relative pt-24 pb-10 bg-white overflow-hidden">
+            <section id='projects-page' className="position-relative pt-24 pb-10 overflow-hidden" style={{ background: 'linear-gradient(250deg, #FFFFFF 0%, #F9F9FF 47.4%, #EBECF7 100%)' }}>
                 <div className="container">
                     <div className="mw-md-2xl mx-auto text-center mb-16">
                         <h2 className="fs-10 mb-6 lh-sm">Explore my recent projects</h2>
