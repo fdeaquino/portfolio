@@ -14,7 +14,7 @@ function Contact() {
                     <div className="row g-16 align-items-center justify-content-center">
                         <div className="col-12 col-md-5 col-sm-6 d-flex justify-content-center">
                             <div className="d-flex mw-md-md mw-sm-xs mw-xs justify-content-center">
-                                <div className="d-inline-block p-1 rounded-pill" style={{ background: 'linear-gradient(90deg, rgba(108,213,246,1 ) 0%, rgba(248,157,92,1) 50%, rgba(91,106,240,1) 100%)' }}>
+                                <div className="d-inline-block p-1 rounded-pill" style={{ background: "linear-gradient(0deg, rgba(0,70,68,1) 0%, rgba(18,106,89,1) 20%, rgba(60,144,102,1) 40%, rgba(113,181,108,1) 60%, rgba(175,216,109,1) 80%, rgba(249,248,113,1) 100%)" }}>
                                     <img className="img-fluid rounded-pill" src={Contact1} alt="image of phone and computer" />
                                 </div>
                             </div>
@@ -34,7 +34,7 @@ function Contact() {
                                         <div className="col-12">
                                             <div className="form-group">
                                                 <label className="fs-18 fw-medium text-white mb-3" htmlFor="signInInput3-1">Name</label>
-                                                <div className="rounded-1" style={{ padding: '1px', background: 'linear-gradient(90deg, rgba(108,213,246,1 ) 0%, rgba(248,157,92,1) 50%, rgba(91,106,240,1) 100%)' }}>
+                                                <div className="rounded-1" style={{ padding: '1px', background: 'linear-gradient(90deg, rgba(60,144,102,1) 0%, rgba(175,216,109,1) 45%, rgba(249,248,113,1) 55%,rgba(0,70,68,1) 100%)' }}>
                                                     <input className="bg-black text-dark px-5 py-4 w-100 border-0 rounded-1" id="contactsInput3-1" style={{ borderRadius: '3px' }} type="text" placeholder="Your First & Last Name" />
                                                 </div>
                                             </div>
@@ -42,7 +42,7 @@ function Contact() {
                                         <div className='col-12'>
                                             <div className="form-group">
                                                 <label className="fs-18 fw-medium text-white mb-3">Email address</label>
-                                                <div className="rounded-1" style={{ padding: '1px', background: 'linear-gradient(90deg, rgba(108,213,246,1 ) 0%, rgba(248,157,92,1) 50%, rgba(91,106,240,1) 100%)' }}>
+                                                <div className="rounded-1" style={{ padding: '1px', background: 'linear-gradient(90deg, rgba(60,144,102,1) 0%, rgba(175,216,109,1) 45%, rgba(249,248,113,1) 55%,rgba(0,70,68,1) 100%)' }}>
                                                     <input className="bg-black text-dark px-5 py-4 w-100 border-0 rounded-1" id="signInInput3-1" style={{ borderRadius: '3px' }} type="email" placeholder="Your Email" />
                                                 </div>
                                             </div>
@@ -51,7 +51,7 @@ function Contact() {
                                         <div className='col-12'>
                                             <div className="form-group mb-5">
                                                 <label className="fs-18 fw-medium text-white mb-3">Email address</label>
-                                                <div className="form-group mb-5 rounded-1" style={{ padding: '1px', background: 'linear-gradient(90deg, rgba(108,213,246,1 ) 0%, rgba(248,157,92,1) 50%, rgba(91,106,240,1) 100%)' }}>
+                                                <div className="form-group mb-5 rounded-1" style={{ padding: '1px', background: 'linear-gradient(90deg, rgba(60,144,102,1) 0%, rgba(175,216,109,1) 45%, rgba(249,248,113,1) 55%,rgba(0,70,68,1) 100%)' }}>
                                                     <textarea className="form-control text-dark bg-black px-5 py-4 w-100 border-0 rounded-1" id="contactsInput3-3" rows="3" placeholder="Write message" style={{ height: '155px' }}></textarea>
                                                 </div>
 

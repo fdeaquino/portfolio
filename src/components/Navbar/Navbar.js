@@ -37,7 +37,7 @@ export default function Navbar() {
             <HelmetProvider>
                 <Helmet {...meta}></Helmet>
             </HelmetProvider>
-            <header id="cs-navigation" className={isExpanded ? 'bg-secondary cs-active' : 'bg-secondary'}>
+            <header id="cs-navigation" className={isExpanded ? 'bg-black cs-active' : 'bg-black'}>
                 <div className="cs-container">
                     <Link to="/" className="cs-logo" aria-label="back to home" onClick={closeMenu}>
                         <img
@@ -93,7 +93,7 @@ export default function Navbar() {
                                 <div className="d-lg-block">
                                     <div className="rounded-3" style={{ padding: "3px", background: "linear-gradient(185deg, rgba(0,70,68,1) 0%, rgba(18,106,89,1) 20%, rgba(60,144,102,1) 40%, rgba(113,181,108,1) 60%, rgba(175,216,109,1) 80%, rgba(249,248,113,1) 100%)" }}>
 
-                                        <button className="btn btn-secondary px-4 py-3 rounded-1" type="button" onClick={closeMenu}>
+                                        <button className="btn btn-secondary btn-black px-4 py-3 rounded-1" type="button" onClick={closeMenu}>
                                             <Link to="/contact" className="fs-17 fw-medium text-white mb-0">Contact</Link>
                                         </button>
                                     </div>

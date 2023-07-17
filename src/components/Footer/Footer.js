@@ -11,7 +11,7 @@ function Footer() {
 
     return (
         <React.Fragment>
-            <section id='footer-section' className="py-16 bg-secondary overflow-hidden">
+            <section id='footer-section' className="py-16 bg-black overflow-hidden">
                 <div className="container">
                     <div className="row align-items-center justify-content-center border-bottom border-dark-light pb-9 g-16">
                         <div className="col-auto">

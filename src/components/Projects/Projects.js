@@ -277,7 +277,7 @@ function Projects() {
                                     padding: "3px",
                                     background: "linear-gradient(180deg, rgba(0,70,68,1) 0%, rgba(18,106,89,1) 20%, rgba(60,144,102,1) 40%, rgba(113,181,108,1) 60%, rgba(175,216,109,1) 80%)"
                                 }}>
-                                    <button className="btn btn-secondary px-4 py-3 rounded-1" type="button">
+                                    <button className="btn btn-secondary btn-black px-4 py-3 rounded-1" type="button">
                                         <a href="https://github.com/fdeaquino" className="fs-17 fw-medium text-white mb-0">View More Projects</a>
                                     </button>
                                 </div>
