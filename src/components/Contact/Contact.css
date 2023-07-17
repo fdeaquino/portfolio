@@ -1,0 +1,26 @@
+@media only screen and (min-width: 64rem) {
+    #contact-page {
+        margin-top: 3rem;
+    }
+}
+
+@media only screen and (min-width: 48rem) {
+    #contact-page {
+        margin-top: 1.5rem;
+    }
+}
+@media (max-width: 767px) {
+    #justify-content-center-576 {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .mw-xs {
+        max-width: 14rem !important;
+    }
+}
+
+.form-control {
+    font-family: inherit;
+}

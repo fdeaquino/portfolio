@@ -7,7 +7,7 @@ import Projects from './components/Projects/Projects';
 import SkillsResume from './components/SkillsResume/SkillsResume';
 import Blog from './components/Blog/Blog';
 import SingleBlogView from './components/SingleBlogView/SingleBlogView';
-
+import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 
 
@@ -154,7 +154,7 @@ function App() {
             <Route path=":id" element={<SingleBlogView blogData={blogData} />} />
           </Route>
           {/* <Route path="/notfound" element={<NotAvailable casesData={casesData} />} /> */}
-          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
       <Footer />
