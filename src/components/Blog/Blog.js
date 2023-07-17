@@ -36,7 +36,7 @@ function Blog({ blogData }) {
                                 {blogsToShow.map((blog, index) => {
                                     return (
                                         <div key={blog.id} className="col-12 col-md-4">
-                                            <Link to={`/${blog.id}`}>
+                                            <Link to={`/blog/${blog.id}`}>
                                                 <div className="position-relative">
                                                     <img className="w-100 mb-5 rounded-3" src={blog.imgSrc} alt={blog.altText} />
                                                     <h3 className="fs-17 fw-semibold lh-sm mb-4">{blog.title}</h3>

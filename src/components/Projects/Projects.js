@@ -220,7 +220,7 @@ function Projects() {
                                 {projects.map(project => (
                                     <div className="col-12 col-md-4" key={project.id}>
                                         <div>
-                                            <a className="d-block mb-9" href="#">
+                                            <a className="d-block mb-9" href={project.deployedLink}>
                                                 <img className="rounded shadow-lg img-fluid d-block w-100" src={project.img} alt="" />
                                             </a>
                                             <h4 className="fs-16 mb-4">{project.name}</h4>
@@ -249,12 +249,22 @@ function Projects() {
 
                                             <a className="d-inline-block" href={project.deployedLink} style={{ textDecoration: "none" }}>
                                                 <h4 className="fs-18 fw-medium mb-4">
-                                                    <p>{project.visit}</p>
+                                                    <p>
+                                                        {project.visit}
+                                                        <span className='ms-2'>
+                                                            <svg className="rotate-45" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M9.5 1.5L1.5 9.5" stroke="black" strokeWidth="1.3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                                <path d="M9.5 8.83571V1.5H2.16429" stroke="black" strokeWidth="1.3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </p>
                                                 </h4>
                                             </a>
                                             <a className="d-flex" href={project.repoLink} style={{ textDecoration: "none" }}>
                                                 <h4 className="fs-18 fw-medium">
-                                                    <p className="mb-2">Code Repository</p>
+                                                    <p className="mb-2">
+                                                        Code Repository
+                                                    </p>
                                                     <div className="w-100 h-px bg-black" style={{ background: 'linear-gradient(98deg, #004644 0%, #126A59 20%, #3C9066 40%, #71B56C 60%, #AFD86D 80%, #F9F871 200%)', height: "2px" }}></div>
                                                 </h4>
                                             </a>
